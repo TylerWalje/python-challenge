@@ -10,3 +10,9 @@ with open(file, 'r') as text:
     lines - text.read()
 
     print (lines)
+
+with open(csvpath, newline= '') as csvfile
+
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    csv header = next(csvreader)
