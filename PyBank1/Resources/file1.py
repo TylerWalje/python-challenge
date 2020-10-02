@@ -1,9 +1,9 @@
 import os
 import csv
 
-file = os.path.join("budget_data_csv")
+file1 = os.path.join("budget_data_csv")
 
-with open(file, 'r') as text:
+with open(file1, 'r') as text:
 
     print(text)
 
@@ -11,8 +11,27 @@ with open(file, 'r') as text:
 
     print (lines)
 
-with open(csvpath, newline= '') as csvfile
+#with open(file1, newline= '') as csvfile
 
-    csvreader = csv.reader(csvfile, delimiter=',')
+    #print(f"")
+
+#with open(file1, newline= 'r', firstrow= '') as csvfile
+
+    #csvreader = csv.reader(csvfile, delimiter=',')
 
     csv header = next(csvreader)
+    print(f"")
+
+   with open(file1, newline= 'r', firstrow= '') as csvfile
+    csvreader = csv.reader(csvfile, delimiter=',') 
+        for row in csvreader
+            if row [0]
+
+months = 0
+value = 0
+dates = []
+profit = []
+
+profits.append(value)
+value = int()
+
