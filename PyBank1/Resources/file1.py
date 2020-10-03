@@ -14,6 +14,13 @@ total = (firstrow[1])
 value = (firstrow[1])
 dates.append(row[1])
 
+totalmonths = 0
+totalamount = 0
+months = []
+value = []
+dates = []
+profit = []
+
 
 
 #with open(file1, 'r') as text:
@@ -40,11 +47,12 @@ dates.append(row[1])
         for row in csvreader
             if row [0]
 
-months = []
-value = []
-dates = []
-profit = []
+
 
 profits.append(value)
 value = int()
 
+print(Financial Analasys)
+print(f"totalmonths: {str[totalmonths]}")
+print(f"totalamount: {str[totalamount]}")
+print(f"")
