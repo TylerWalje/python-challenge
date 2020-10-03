@@ -8,11 +8,13 @@ with open(file1, newline = " ")
     csvreader = csv.reader(file1, delimiter = ",")
 
 for row in csvreader
-total.append(row[1])
-totalmonths.append
-total = (firstrow[1])
-value = (firstrow[1])
+
 dates.append(row[1])
+
+firstrow = next(csvreader)
+totalmonths += 1
+totalamount += int(firstrow)
+value = int(firstrow)
 
 totalmonths = 0
 totalamount = 0
@@ -21,21 +23,17 @@ value = []
 dates = []
 profit = []
 
+for row in csvreader
+    dates.append(row[0])
 
+    change = int(row[1])-value
 
-#with open(file1, 'r') as text:
+    value = int(row[1])
 
-    print(text)
+greatestincreaseprofits = mac(profit)
+#increasedate = dates[greate]????
 
-    lines - text.read()
-
-    print (lines)
-
-#with open(file1, newline= '') as csvfile
-
-    #print(f"")
-
-#with open(file1, newline= 'r', firstrow= '') as csvfile
+greatestdecreaseprofits = min)profit)
 
     #csvreader = csv.reader(csvfile, delimiter=',')
 
