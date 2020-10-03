@@ -3,39 +3,48 @@ import csv
 
 file1 = os.path.join("budget_data_csv")
 
-with open(file1, newline = " ")
-
-    csvreader = csv.reader(file1, delimiter = ",")
-
-for row in csvreader
-
-dates.append(row[1])
-
-firstrow = next(csvreader)
-totalmonths += 1
-totalamount += int(firstrow)
-value = int(firstrow)
-
 totalmonths = 0
 totalamount = 0
-months = []
-value = []
+change = 0
+value = 0
 dates = []
 profit = []
 
-for row in csvreader
+with open(file1, newline = " ") as csvfile:
+
+    csvreader = csv.reader(csvfile, delimiter = ",")
+    csvheader = next(csvfile)
+
+for row in csvreader:
+#tracking dates
     dates.append(row[0])
 
+    firstrow = next(csvreader)
+    totalmonths += 1
+    totalamount += int(firstrow)
+    value = int(firstrow)
+
+
+#tracking change
     change = int(row[1])-value
+
+    profit.append(change)
 
     value = int(row[1])
 
-greatestincreaseprofits = mac(profit)
-#increasedate = dates[greate]????
+#total profits (everything)
+totalamount = totalamount + int(row[1])
 
-greatestdecreaseprofits = min)profit)
+#greatest increase profits
+greatestincreaseprofits = max(profit)
+greatestincrease = profit.index(greatestincreaseprofits)
+increasedate = dates[greatestincrease]
 
-    #csvreader = csv.reader(csvfile, delimiter=',')
+#least growth in profits
+greatestdecreaseprofits = min(profit)
+greatestdecrease = profit.index(greatestdecreaseprofits)
+decreasedate = dates[greatestdecrease]
+
 
     csv header = next(csvreader)
     print(f"")
@@ -51,6 +60,8 @@ profits.append(value)
 value = int()
 
 print(Financial Analasys)
-print(f"totalmonths: {str[totalmonths]}")
-print(f"totalamount: {str[totalamount]}")
-print(f"")
+print(f"Total Months: {str[totalmonths]}")
+print(f"Total Amount: {str[totalamount]}")
+print(f"Average Change: {str(round(")
+print (f"Greatest Increase In Profits: {increasedate} {str(greatestincreaseprofits}")
+print (f"Greatest Decrease In Profits: {decreasedate} {str(greatestdecreaseprofits}")
