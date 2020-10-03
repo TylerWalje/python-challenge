@@ -24,7 +24,9 @@ for row in csvreader:
     totalamount += int(firstrow)
     value = int(firstrow)
 
-
+#header row
+    csvheader = next(csvreader)
+    print(f"")
 #tracking change
     change = int(row[1])-value
 
@@ -32,8 +34,10 @@ for row in csvreader:
 
     value = int(row[1])
 
+    totalmonths += 1
+
 #total profits (everything)
-totalamount = totalamount + int(row[1])
+    totalamount = totalamount + int(row[1])
 
 #greatest increase profits
 greatestincreaseprofits = max(profit)
@@ -46,15 +50,12 @@ greatestdecrease = profit.index(greatestdecreaseprofits)
 decreasedate = dates[greatestdecrease]
 
 
-    csv header = next(csvreader)
-    print(f"")
+   #with open(file1, newline= 'r', firstrow= '') as csvfile
+    #csvreader = csv.reader(csvfile, delimiter=',') 
+        #for row in csvreader
+            #if row [0]
 
-   with open(file1, newline= 'r', firstrow= '') as csvfile
-    csvreader = csv.reader(csvfile, delimiter=',') 
-        for row in csvreader
-            if row [0]
-
-
+change1 = sum(profit)/len(change)
 
 profits.append(value)
 value = int()
@@ -62,6 +63,16 @@ value = int()
 print(Financial Analasys)
 print(f"Total Months: {str[totalmonths]}")
 print(f"Total Amount: {str[totalamount]}")
-print(f"Average Change: {str(round(")
-print (f"Greatest Increase In Profits: {increasedate} {str(greatestincreaseprofits}")
-print (f"Greatest Decrease In Profits: {decreasedate} {str(greatestdecreaseprofits}")
+print(f"Average Change: {str(round(change1, 2))}")
+print(f"Greatest Increase In Profits: {increasedate} {str(greatestincreaseprofits}")
+print(f"Greatest Decrease In Profits: {decreasedate} {str(greatestdecreaseprofits}")
+
+solution = open("solution.txt, "w+")
+
+line1 = "Financial Analysis"
+line2 = str(f"Total Months: {str)totalmonths)}")
+line3 = str(f"Total: Amount: {str(totalamount)}")
+line4 = str(f"Average Change: {str(round(change1, 2))}")
+line5 = str(f"Greatest Increase in Profits: {greatestincrease} {str(greatestincreaseprofits))}")
+line6 = str(f"Greatest Decrease in Profits: {decreasedate} {str(greatestdecreaseprofits))}")
+output.write('{}\n{}\n{}\n{}\n{}\n{}\n'.format(line1, line2, line3, line4, line5, line6))
