@@ -63,7 +63,7 @@ value = int()
 print("Financial Analysis")
 print(f"Total Months: {str(totalmonths)}")
 print(f"Total Amount: ${str(totalamount)}")
-print(f"Average Change: ${str(round(change1, 2))}")
+print(f"Average Change: ${str(round(change1))}")
 print(f"Greatest Increase In Profits: {increasedate} ${str(greatestincreaseprofits)})")
 print(f"Greatest Decrease In Profits: {decreasedate} ${str(greatestdecreaseprofits)})")
 
@@ -72,7 +72,7 @@ solution = open("solution.txt", "w")
 line1 = "Financial Analysis"
 line2 = str(f"Total Months: {str(totalmonths)}")
 line3 = str(f"Total: Amount: ${str(totalamount)}")
-line4 = str(f"Average Change: ${str(round(change1, 2))}")
+line4 = str(f"Average Change: ${str(round(change1))}")
 line5 = str(f"Greatest Increase in Profits: {greatestincrease} ${str(greatestincreaseprofits)})")
 line6 = str(f"Greatest Decrease in Profits: {decreasedate} ${str(greatestdecreaseprofits)})")
 
