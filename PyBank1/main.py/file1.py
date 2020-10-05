@@ -49,7 +49,6 @@ greatestdecreaseprofits = min(profit)
 greatestdecrease = profit.index(greatestdecreaseprofits)
 decreasedate = dates[greatestdecrease]
 
-
    #with open(file1, newline= 'r', firstrow= '') as csvfile
     #csvreader = csv.reader(csvfile, delimiter=',') 
         #for row in csvreader
