@@ -34,3 +34,24 @@ with open(csv_path, newline='') as csvfile:
                 decrease = [row[0], change]
 
         previous = int(row[1])
+
+        # average change
+average_change = sum(monthlychange) / len(monthlychange) if monthlychange else 0
+
+# Output
+summary = (
+    f"Financial Analysis\n"
+    f"----------------------------\n"
+    f"Total Months: {months}\n"
+    f"Total: ${total}\n"
+    f"Average Change: ${average_change:.2f}\n"
+    f"Greatest Increase in Profits: {increase[0]} (${increase[1]})\n"
+    f"Greatest Decrease in Profits: {decrease[0]} (${decrease[1]})"
+)
+
+print(summary)
+
+# Output to text file in folder
+output_path = 'PyBank/analysis/financial_analysis_summary.txt'
+with open(output_path, 'w') as file:
+    file.write(summary)
