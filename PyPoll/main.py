@@ -15,7 +15,7 @@ with open(csv_path, newline='') as csvfile:
     for row in csvreader:
         votes += 1 
         candidate_name = row[2] 
-
+# Create dictionary
         if candidate_name in candidates:
             candidates[candidate_name] += 1
         else:
