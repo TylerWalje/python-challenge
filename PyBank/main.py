@@ -1,4 +1,5 @@
 import csv
+import os
 
 # Create variables
 months = 0
@@ -9,7 +10,7 @@ increase = ['', 0]
 decrease = ['', 0]
 
 # csv path
-csv_path = 'PyBank/Resources/budget_data.csv'
+csv_path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
 
 with open(csv_path, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
