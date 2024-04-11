@@ -9,7 +9,7 @@ monthlychange = []
 increase = ['', 0]
 decrease = ['', 0]
 
-# csv path
+# Csv path
 csv_path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
 
 with open(csv_path, newline='') as csvfile:
@@ -17,26 +17,23 @@ with open(csv_path, newline='') as csvfile:
     next(csvreader) 
 
     for row in csvreader:
- 
         months += 1
         total += int(row[1])
 
-    # Monthly change
-    if previous is not None:
+        # Monthly change
+        if previous is not None:
             change = int(row[1]) - previous
             monthlychange.append(change)
 
-    # Profits increace
-    if change > increase[1]:
+            if change > increase[1]:
                 increase = [row[0], change]
 
-    # Profits decrease
-    if change < decrease[1]:
+            if change < decrease[1]:
                 decrease = [row[0], change]
 
-                previous = int(row[1])
+        previous = int(row[1])
 
-# average change
+# Average change
 average_change = sum(monthlychange) / len(monthlychange) if monthlychange else 0
 
 # Output
