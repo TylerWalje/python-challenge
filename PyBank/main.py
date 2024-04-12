@@ -20,7 +20,7 @@ with open(csv_path, newline='') as csvfile:
         months += 1
         total += int(row[1])
 
-        # Monthly change
+# Monthly change
         if previous is not None:
             change = int(row[1]) - previous
             monthlychange.append(change)
@@ -39,7 +39,7 @@ average_change = sum(monthlychange) / len(monthlychange) if monthlychange else 0
 # Output
 summary = (
     f"Financial Analysis\n"
-    f"----------------------------\n"
+    f"------------------------\n"
     f"Total Months: {months}\n"
     f"Total: ${total}\n"
     f"Average Change: ${average_change:.2f}\n"
