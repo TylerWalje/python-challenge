@@ -49,7 +49,7 @@ summary = (
 
 print(summary)
 
-# Output to text file in folder
+# Output to text file in folder 
 pathout = 'PyBank/analysis/financial_analysis_summary.txt'
 with open(pathout, 'w') as file:
     file.write(summary)

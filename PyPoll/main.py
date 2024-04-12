@@ -24,7 +24,7 @@ with open(csv_path, newline='') as csvfile:
 # Election winner
 winner = max(candidates, key=candidates.get)
 
-# Output file path 
+# Output file path
 pathout = os.path.join('PyPoll', 'analysis', 'election_results_summary.txt')
 
 with open(pathout, 'w') as file:
