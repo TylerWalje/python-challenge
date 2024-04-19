@@ -5,8 +5,8 @@ import os
 votes = 0
 candidates = {}
 
-# Csv path
-csv_path = os.path.join('PyPoll', 'Resources', 'election_data.csv')
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+csv_path = os.path.join('Resources', 'election_data.csv')
 
 with open(csv_path, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -25,7 +25,7 @@ with open(csv_path, newline='') as csvfile:
 winner = max(candidates, key=candidates.get)
 
 # Output file path
-pathout = os.path.join('PyPoll', 'analysis', 'election_results_summary.txt')
+pathout = os.path.join('Analysis', 'election_results_summary.txt')
 
 with open(pathout, 'w') as file:
 

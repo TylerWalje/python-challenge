@@ -9,8 +9,8 @@ monthlychange = []
 increase = ['', 0]
 decrease = ['', 0]
 
-# Csv path
-csv_path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+csv_path = os.path.join('Resources', 'budget_data.csv')
 
 with open(csv_path, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -50,6 +50,6 @@ summary = (
 print(summary)
 
 # Output to text file in folder 
-pathout = 'PyBank/analysis/financial_analysis_summary.txt'
+pathout = 'Analysis/financial_analysis_summary.txt'
 with open(pathout, 'w') as file:
     file.write(summary)
